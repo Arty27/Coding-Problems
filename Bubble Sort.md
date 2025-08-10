@@ -22,3 +22,9 @@ for i in range(n):
             arr[j], arr[j + 1] = arr[j + 1], arr[j]
 print(arr)
 ```
+
+### Complexities
+
+<b>Time</b>: Best Case = <code>O(n)</code> with swap flag Worst Case: <code>O(n<sup>2</sup>)</code>
+
+<b>Space:</b> Always <code>O(1)</code> since no extra space needed other than few variables

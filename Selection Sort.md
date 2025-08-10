@@ -25,3 +25,9 @@ for i in range(n):
     arr[i], arr[min] = arr[min], arr[i]
 print(arr)
 ```
+
+### Complexities
+
+<b>Time</b>: Best Case = <code>O(n<sup>2</sup>)</code> Worst Case: <code>O(n<sup>2</sup>)</code>
+
+<b>Space:</b> Always <code>O(1)</code> since no extra space needed other than few variables
