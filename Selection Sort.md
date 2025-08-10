@@ -1,24 +1,27 @@
 ## Selection Sort
 
-Roles of the loops
+"Select the smallest, put it in place."
 
-- Outer loop → How many passes we make
-  Think: “How many times do we bubble items to their correct place at the end.”
-  After each pass, the largest remaining element is in place, so we reduce the range.
+Breakdown:
 
-- Inner loop → The bubbling itself
-  Goes through the list comparing adjacent elements (j and j+1) and swapping if they’re in the wrong order.
+- Outer loop → "Pick the position" (we’re deciding where the next smallest element should go).
+
+- Inner loop → "Find the smallest in the rest" (search the unsorted part of the array).
+
+- Swap once → "Put it in place" (move that smallest to the current position).
 
 ### Code
 
-Inner loop compares adjacent elements `j and j+1 `
+min or max position is selected and then swaping to that position happens outside the inner loop
 
 ```
 arr = [1, 4, 3, 7, 5, 2, 3]
 n = len(arr)
 for i in range(n):
-    for j in range(0, n - i - 1):
-        if arr[j] < arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    min = i
+    for j in range(i + 1, n):
+        if arr[min] > arr[j]:
+            min = j
+    arr[i], arr[min] = arr[min], arr[i]
 print(arr)
 ```
